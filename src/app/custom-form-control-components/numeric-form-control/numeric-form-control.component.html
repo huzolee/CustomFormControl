@@ -1,0 +1,10 @@
+<ng-container *ngIf="labelAvailable">
+  <label [for]="numericFormControl">{{label}}</label><span *ngIf="required">*</span>
+  <br />
+</ng-container>
+
+<input type="number" [formControl]="numericFormControl" (input)="doInput()" (blur)="doBlur()" />
+
+<span *ngIf="invalid">
+  form control is invalid
+</span>
